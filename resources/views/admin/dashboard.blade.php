@@ -26,22 +26,22 @@
  
 
 @extends('admin.layout.adminlayout')
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard</title>
-    <!-- Google Font: Source Sans Pro -->
-  </head>
+ 
+   
+{{-- @include('admin.pages.adminheader') --}}
+  @section('content')
+      
+ 
   <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
       <!-- Preloader -->
       <div class="preloader flex-column justify-content-center align-items-center">
         <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-      </div> @include('admin.pages.adminheader')
+      </div>
+      
       <!-- /.navbar -->
-      <!-- Main Sidebar Container --> @include('admin.pages.adminsidebar')
+      <!-- Main Sidebar Container -->
+       {{-- @include('admin.pages.adminsidebar') --}}
       <!-- Content Wrapper. Contains page content --> @section('content') <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
@@ -619,7 +619,7 @@
         </section>
         <!-- /.content -->
       </div>
-      @include('admin.pages.adminfooter')
+      {{-- @include('admin.pages.adminfooter') --}}
        @endsection
       <!-- /.content-wrapper --> 
       <!-- Control Sidebar -->
@@ -630,4 +630,5 @@
     </div>
     <!-- ./wrapper -->
   </body>
-</html>
+  @endsection
+ 

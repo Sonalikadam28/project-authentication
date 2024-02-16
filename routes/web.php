@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,10 +26,24 @@ Route::group(['middleware'=>'admin'],function(){
     Route::get('admin/dashboard',[AdminController::class,'dashboard'])->name('dashboard');
 });
 
-Route::get('/categories', function () {
-    return view('admin.categories');
-})->name('categories');
+// Route::get('/categories', function () {
+//     return view('admin.categories');
+// })->name('categories');
 
+Route::get('/admin/categories', [CategorieController::class,'showUser'])->name('categories');
+// Route::get('/user/{id}', [CategorieController::class,'singleuser'])->name('view.user');
+Route::post('/admin/addcategory', [CategorieController::class,'addCategory'])->name('addCategory');
+Route::post('/admin/updatecategory/{id}', [CategorieController::class,'updateUser'])->name('updatepost.category');
+Route::get('/admin/updatecategory/{id}', [CategorieController::class,'updateCategory'])->name('update.category');
+Route::get('/admin/deletecategory/{id}', [CategorieController::class,'deleteCategory'])->name('delete.category');
+Route::view('newcategory','/admin.categories.addcategories');
+ 
+Route::get('/admin/products', [ProductController::class,'showUser'])->name('products');
+Route::post('/admin/addproduct', [ProductController::class,'addProduct'])->name('addProduct');
+Route::post('/admin/update/{id}', [ProductController::class,'updateUser'])->name('updatepost.product');
+Route::get('/admin/updateproduct/{id}', [ProductController::class,'updateProduct'])->name('update.product');
+Route::get('/admin/deleteproduct/{id}', [ProductController::class,'deleteUser'])->name('delete.product');
+Route::view('newproduct','/admin.products.addproducts');
 
 Auth::routes();
 

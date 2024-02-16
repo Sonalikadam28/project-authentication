@@ -91,7 +91,9 @@
               <div class="row">
                 <div class="col-md-9 col-lg-8 mx-auto pl-5 pr-5">
                   <h3 class="login-heading mb-4">New Buddy!</h3>
-                  <form method="POST" action="{{ route('register') }}"> @csrf <div class="form-label-group">
+                  <form method="POST" action="{{ route('register') }}"> 
+                    @csrf 
+                    <div class="form-label-group">
                       <input type="text" value="{{ old('name') }}" id="inputName" class="form-control @error('name') is-invalid @enderror" placeholder="Enter name" name="name">
                       <label for="inputName">Name</label>
                       <span class="text-danger"> @error('name') {{ $message }} @enderror </span>
