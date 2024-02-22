@@ -15,7 +15,7 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    @include('pages.header')
+    @include('user.pages.header')
 </head>
 <body>
     <div id="app">

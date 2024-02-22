@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row ">
             <div class="my-3 " style="margin-left: 250px ">
-                <h3>Add New Categories</h3>
+                <h3>Add New Category</h3>
                 <div class="border p-3 w-50 h-100" style="background-color: white">
                  <form action="{{ route('addCategory') }}" method="POST" enctype="multipart/form-data" >
                     @csrf

@@ -35,31 +35,23 @@
                         <span class="text-danger "> @error('Product_description') {{ $message }} @enderror </span>
                     </div>
 
-                    {{-- <div class="mb-3">
+                    <div class="mb-3">      
                         <label >Category</label>
-                        <input type="text" value="{{ old('Product_category') }}"   class="form-control @error('Product_category') is-invalid @enderror" name="Product_category">
-                        <span class="text-danger "> @error('Product_category') {{ $message }} @enderror </span>
-                    </div> --}}
-                   
-                    <div class="mb-3">
-                      <label >Category</label>
-                      <select class="form-select @error('Product_category') is-invalid @enderror" aria-label="Default select example"  name="Product_category">
-                        {{-- <option selected >Open this categories</option> --}}
-                        <option value="t-shirt">t-shirt</option>
-                        <option value="jacket">jacket</option>
-                        <option value="saree">saree</option>
-                        <option value="clock">clock</option>
-                        <option value="lipstick">lipstick</option>
-                        <option value="cup">cup</option>
-                        <option value="toys">toys</option>
-
-                      </select>
-                      <span class="text-danger "> @error('Product_category') {{ $message }} @enderror </span>  
+                      <select class="form-select @error('category_id') is-invalid @enderror" aria-label="Default select example"  name="category_id" value="{{ old('category_id') }}">
+                         <option value="">Select Category</option>
+                          @foreach ($category as $val)
+                          <option value="{{ $val->id }}">{{ $val->name}}</option>
+                          @endforeach
+  
+                       </select>
+                        <span class="text-danger "> @error('category_id') {{ $message }} @enderror </span>  
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="check1" name="Product_status" value="1" checked>
-                        <label class="form-check-label">Publish</label>
+                        <input class="form-check-input" type="checkbox" id="check1" name="Product_status" value="{{ old('Product_status') }}"  checked>
+                        <label class="form-check-label">Status</label>
+                        <span class="text-danger "> @error('Product_status') {{ $message }} @enderror </span>
+
                     </div>
                      
                      <button type="submit" class="btn btn-primary">Submit</button>

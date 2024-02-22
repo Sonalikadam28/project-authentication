@@ -11,7 +11,7 @@
        <div class="row ">
            <div class="col-lg-9 " style="margin-left: 260px">
                <h3>All Products</h3>
-               <a href="/newproduct" class="btn btn-success   mb-2">Add Products</a>
+               <a href="/admin/newproduct" class="btn btn-success   mb-2">Add Products</a>
                <table class="table table-bordered table-striped table-sm" >
                     <tr>
                        <th>Product_id</th>
@@ -37,7 +37,7 @@
                         </td>
                         <td>{{ $user->Product_price }}</td>
                         <td>{{ $user->Product_description }}</td>
-                        <td>{{ $user->Product_category }}</td>
+                        <td>{{ $user->cat_name }}</td>
                         <td>{{ ($user->Product_status) ? 'Publish' : 'Unpublished' }}</td>
                        {{-- <td><a href="{{ route('view.user', $user->id) }}" class="btn btn-outline-primary btn-sm">View</a></td> --}}
                        {{-- <td><a href="{{ route('delete.product', $user->id) }}" class="btn btn-outline-danger btn-sm">Delete</a></td>

@@ -9,7 +9,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light osahan-nav shadow-sm">
         <div class="container">
-        <a class="navbar-brand" href="index.html"><img alt="logo" src="img/logo.png"></a>
+        <a class="navbar-brand" href="index.html"><img alt="logo" src="/img/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,7 +46,7 @@
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img alt="Generic placeholder image" src="img/user/4.png" class="nav-osahan-pic rounded-pill"> My Account
+        <img alt="Generic placeholder image" src="/img/user/4.png" class="nav-osahan-pic rounded-pill" height="20px"> My Account
         </a>
         <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
         <a class="dropdown-item" href="orders.html#orders"><i class="icofont-food-cart"></i> Orders</a>
@@ -63,7 +63,7 @@
         </a>
         <div class="dropdown-menu dropdown-cart-top p-0 dropdown-menu-right shadow-sm border-0">
         <div class="dropdown-cart-top-header p-4">
-        <img class="img-fluid mr-3" alt="osahan" src="img/cart.jpg">
+        <img class="img-fluid mr-3" alt="osahan" src="/img/cart.jpg">
         <h6 class="mb-0">Gus's World Famous Chicken</h6>
         <p class="text-secondary mb-0">310 S Front St, Memphis, USA</p>
         <small><a class="text-primary font-weight-bold" href="#">View Full Menu</a></small>

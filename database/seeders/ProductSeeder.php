@@ -15,13 +15,13 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         $products->each(function($product){
-            categorie::create([
+            product::create([
                 'product_name' => $product->name,
                 'product_image' =>  $product->image,
                 'product_price' =>  $product->price,
                 'product_description' =>  $product->description,
                 'product_category' =>  $product->category,
-                'product_stautus' =>  $product->status,
+                'product_status' =>  $product->status,
              ]);
           });
     }

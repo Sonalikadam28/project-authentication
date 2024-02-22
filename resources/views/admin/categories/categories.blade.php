@@ -11,7 +11,7 @@
        <div class="row ml-auto">
            <div class="col-lg-6 " style="margin-left: 300px">
                <h3>All Categories</h3>
-               <a href="/newcategory" class="btn btn-success   mb-2">Add Categories</a>
+               <a href="/admin/newcategory" class="btn btn-success   mb-2">Add Category</a>
                <table class="table table-bordered table-striped "  >
                     <tr>
                        <th>Id</th>
@@ -24,7 +24,7 @@
 
 
                     </tr>
-                   @foreach ($data as $id=>$user)
+                   @foreach ($categories as $id=>$user)
                      <tr>
                        <td>{{ $user->id }}</td>
                        <td>{{ $user->name }}</td>
@@ -43,7 +43,7 @@
                </table>
 
                <div class="mt-5">
-                 {{ $data->links() }}
+                 {{ $categories->links() }}
                   
                </div>
                {{-- <div class="mt-5">

@@ -26,10 +26,10 @@
 {{-- @extends('layout.mainlayout') --}}
 
 
-@extends('layouts.app')
+@extends('user.layouts.app')
 
 @section('content') 
-@include('pages.navbar')
+@include('user.pages.navbar')
 <section class="pt-5 pb-5 homepage-search-block position-relative">
     <div class="banner-overlay"></div>
     <div class="container">
@@ -162,7 +162,7 @@
                 </a>
               </div>
               <div class="item">
-                <a href="listing.html">
+                <a href="">
                   <img class="img-fluid rounded" src="img/slider1.png">
                 </a>
               </div>
@@ -179,35 +179,41 @@
   </section>
   <section class="section pt-5 pb-5 bg-white homepage-add-section">
     <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-6">
-          <div class="products-box">
-            <a href="listing.html">
-              <img alt src="img/pro1.jpg" class="img-fluid rounded">
+      
+      <div class="row gx-5">
+        @foreach ($category as $cat)
+        <div class="col-md-3 col-6 mt-5">
+          <div class="card" style="width: 18rem;">
+            <a href="{{ route('listing',$cat->id) }}">
+            <img src="/images/{{ $cat->image }}" class="card-img-top" alt="..."  style="min-height:30px; object-fit:contain;height:200px; width:200px; padding-left:40px ">
             </a>
-          </div>
+            <div class="card-body">
+              <h5 class="card-title" style="margin-left:80px">{{ $cat->name }}</h5>
+            </div>
         </div>
-        <div class="col-md-3 col-6">
+      </div>
+        {{-- <div class="col-md-3 col-6">
           <div class="products-box">
-            <a href="listing.html">
+            <a href="{{ route('listing') }}">
               <img alt src="img/pro2.jpg" class="img-fluid rounded">
             </a>
           </div>
         </div>
         <div class="col-md-3 col-6">
           <div class="products-box">
-            <a href="listing.html">
+            <a href="{{ route('listing') }}">
               <img alt src="img/pro3.jpg" class="img-fluid rounded">
             </a>
           </div>
         </div>
         <div class="col-md-3 col-6">
           <div class="products-box">
-            <a href="listing.html">
+            <a href="{{ route('listing') }}">
               <img alt src="img/pro4.jpg" class="img-fluid rounded">
             </a>
           </div>
-        </div>
+        </div> --}}
+        @endforeach
       </div>
     </div>
   </section>
@@ -431,6 +437,6 @@
       </div>
     </div>
   </section>
-  @include('pages.footer')
+  @include('user.pages.footer')
    @endsection
   

@@ -79,7 +79,7 @@
 
 
 
-@extends('layouts.app')
+@extends('user.layouts.app')
  
 @section('content') <body class="bg-white">
     <div class="container-fluid">

@@ -58,13 +58,41 @@
                   <p>Products</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{ route('loginuser')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                     <p>Users</p>
+                     @foreach ($users as $user)
+                       <li class="">
+                       <a href="" class="nav-link">
+                        <i class="far fa-circle-thin nav-icon"></i>
+                         {{-- <p>{{ $user->name }}</p> --}}
+                      </a>
+                </li> 
+                  @endforeach
+                </a>
+              </li>
                
+             
+
             </ul>
           </li>
           
-           
-             
+         
         </ul>
+        {{-- <ul>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>  
+          </ul> --}}
       </nav>
       <!-- /.sidebar-menu -->
     </div>

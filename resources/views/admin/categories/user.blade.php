@@ -14,8 +14,8 @@
         <div class="col-sm-8 mt-4">
             <div class="card p-4"  >
                 @foreach ($data as $id=>$categorie)
-                   <h5>Name : {{ $categorie->name }}</h5>
-                   <img src="/images/{{ $categorie->image }}"  width="50%">
+                   <h5>Name : {{ $categorie->Product_name }}</h5>
+                   <img src="/images/{{ $categorie->Product_image }}"  width="50%">
                 @endforeach
             </div>
         </div>
